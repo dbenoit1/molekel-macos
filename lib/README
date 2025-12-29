@@ -1,0 +1,87 @@
+AUTHORS:
+by Stefan Portmann, Copyright (C) 2000-2002 CSCS/ETHZ
+(original IRIX GL implementation, concept and data structure
+by Peter F. Fluekiger, CSCS/UNI Geneva)
+
+DISTRIBUTIONS
+
+     Precompiled executables:
+     If not stated otherwise the executables are statically linked
+     with the GLUT, MUI and GLUI libraries. Therefore, they
+     don't need to be installed extra. On the other hand, a
+     OpenGL/Mesa and libtiff installation is required. 
+     If you prefer to link with other versions of third party objects
+     or shared objects of other packages, download the object files
+     and relink your own MOLEKEL executable
+
+
+INSTALLATION
+
+The precompiled executable distribution contains the following
+files: 
+
+     molekel/bin/molekel         the molekel script:
+                                 adjust paths depending on your installation
+
+     molekel/bin/molekel*.arch   the molekel executable: platform dependent 
+
+     molekel/lib/LICENSE         license information
+
+     molekel/lib/README          this instruction
+
+     molekel/lib/atoms.data      text file with atom type data
+
+     molekel/lib/help.txt        currently a dummy
+
+     molekel/lib/ms              the executable of Connolly's molecular
+                                 surface program
+
+     Unzip and unpack molekel*.tar.gz (gzip -cd molekel*.tar.gz |
+     tar -xvf -) to anywhere. 
+     either 
+         move the files in molekel/bin to /usr/local/bin, then
+         rehash. 
+         move the folder molekel/lib to /usr/local/lib/molekel. 
+     or 
+         adjust the paths in the script molekel 
+         add the location of the script to the path, rehash, or
+         define an alias. 
+     On Win9x/NT unpack the distribution to any place. Copy
+     glut*.dll from the GLUT distribution to the
+     C:\WINDOWS\SYSTEM32 folder for a general installation
+     or to the folder where molekel lives. 
+
+To relink with other versions of third party objects or shared objects
+of other packages do the following: 
+
+     Unzip and unpack molekel-objects*.src.tar.gz (gzip -cd
+     molekel-objects*.src.tar.gz | tar -xvf -) to anywhere. 
+     cd to molekel/objects. 
+     copy the Makefile of your platform (e.g. "cp
+     Makefile-objects.sgi-n32 Makefile"), adjust the paths in the
+     Makefile. 
+     type "make", the executable "glutmolekel" will be generated. 
+     rename glutmolekel appropriately (e.g. molekel*.sgi-n32). 
+     Some libraries which might not be on your system by default
+     are required to relink MOLEKEL: 
+         OpenGL: check with your vendor if available for your
+         system 
+         or Mesa: can be downloaded from http://www.mesa3d.org/
+         If OpenGL is available for your system, performance is
+         usually better compared to Mesa. 
+         GLUT, the OpenGL Utility Toolkit: can be downloaded from
+              http://reality.sgi.com/mjk/glut3/glut3.html 
+         MUI: is part of the GLUT distribution 
+         GLUI (Version 2.1): can be downloaded from http://www.cs.unc.edu/~rademach/glui/
+         GLUI is distributed under the GNU Lesser General
+         Public License. 
+         libtiff: can be downloaded from http://www.libtiff.org/tiff-v3.5.5.tar.gz
+         libjpeg: can be downloaded from ftp://ftp.uu.net/graphics/jpeg
+         libimage: can be downloaded from
+                   https://toolbox.sgi.com/toolbox/src/haeberli/libimage/index.html#dl
+                   (only needed if "-limage" is present in your Makefile) 
+
+MOLEKEL makes use of an adapted version of the tr library by Brian Paul
+(http://www.mesa3d.org/brianp/TR.html), is part of the MOLEKEL distribution.
+
+See http://www.cscs.ch/molekel/ for further information!

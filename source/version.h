@@ -1,0 +1,2 @@
+#define MOLEKEL_VERSION "4.3.linux"
+#define MOLEKEL_VERSION_DATE "27.Dec.25"

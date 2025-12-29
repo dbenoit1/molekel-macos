@@ -1,0 +1,5 @@
+*.o
+*.a
+ms
+glutmolekel
+.DS_Store

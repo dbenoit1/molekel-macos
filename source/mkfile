@@ -1,0 +1,327 @@
+SHELL = /bin/sh
+# ------------------------------------------------------------------------
+# -- Installation Macros
+# ------------------------------------------------------------------------
+
+TARGET      = glutmolekel
+
+# ------------------------------------------------------------------------
+# -- Compilation Macros
+# ------------------------------------------------------------------------
+
+ECHO = echo
+include Makeflags
+VERS_NR = 4.3
+VERS_NAME = $(VERS_NR).$(VERSION)
+MOLEKEL_VERSION     = "$(VERS_NAME)"
+#VERS_DATE = 02.MAI.2001
+VERS_DATE = `date '+%d.%b.%y'`
+MOLEKEL_VERSION_DATE = "$(VERS_DATE)"
+
+# ------------------------------------------------------------------------
+# -- Files to be updated
+# ------------------------------------------------------------------------
+
+H_FILES = \
+    action.h \
+    box.h \
+    browser.h \
+    calcdens.h \
+    chooseinterf.h \
+    colorinterf.h \
+    connect.h \
+    connolly.h \
+    constant.h \
+    cubeInterpol.h \
+    drawing.h \
+    drawmol.h \
+    drawprop.h \
+    exponents.h \
+    general.h \
+    geometry.h \
+    glutwin.h \
+    license.h \
+    macu.h \
+    main.h \
+    maininterf.h \
+    manip.h \
+    material.h \
+    menu.h \
+    molekel.h \
+    objects.h \
+    output.h \
+    patterns.h \
+    pick.h \
+    readadf.h \
+    readcubecoor.h \
+    readgamess.h \
+    readgauss.h \
+    readhondo.h \
+    readmkl.h \
+    readmolden.h \
+    readmos.h \
+    readnbo.h \
+    readpdb.h \
+    readprddo.h \
+    readxyz.h \
+    readzindo.h \
+    render.h \
+    sgi.h \
+    snap.h \
+    surfaceinterf.h \
+    texture.h \
+    textureinterf.h \
+    tr.h \
+    trackball.h \
+    utils.h \
+    version.h
+
+CPP_FILES = \
+    action.C \
+    box.C \
+    browser.C \
+    calcdens.C \
+    chooseinterf.C \
+    colorinterf.C \
+    connect.C \
+    connolly.C \
+    cubeInterpol.C \
+    drawing.C \
+    drawmol.C \
+    drawprop.C \
+    general.C \
+    geometry.C \
+    glutwin.C \
+    macu.C \
+    main.C \
+    maininterf.C \
+    manip.C \
+    material.C \
+    menu.C \
+    objects.C \
+    output.C \
+    pick.C \
+    readadf.C \
+    readcubecoor.C \
+    readgamess.C \
+    readgauss.C \
+    readhondo.C \
+    readmkl.C \
+    readmolden.C \
+    readmos.C \
+    readnbo.C \
+    readpdb.C \
+    readprddo.C \
+    readxyz.C \
+    readzindo.C \
+    render.C \
+    sgi.C \
+    snap.C \
+    surfaceinterf.C \
+    texture.C \
+    textureinterf.C \
+    tr.C \
+    trackball.C \
+    utils.C
+
+C_FILES = 
+
+O_FILES = ${C_FILES:.c=.o}
+
+O_CPP_FILES = ${CPP_FILES:.C=.o}
+
+
+# ------------------------------------------------------------------------
+# -- Dependency rules
+# ------------------------------------------------------------------------
+
+all: version $(TARGET).depend $(TARGET) ms
+
+ms: ms.f
+	@echo "[1m""--- Making ms""[0m "
+	$(F77) ms.f -o ms
+
+$(TARGET): $(O_FILES) $(O_CPP_FILES)
+	@echo "[1m""--- Linking " $(TARGET) "[0m "
+	@echo ""
+	$(CPP)   $(LD_FLAGS) $(C_FLAGS) $(D_MACROS) -o $(TARGET) \
+	        $(O_FILES) $(O_CPP_FILES) \
+	        $(L_PATH) $(LIBRARIES)
+	@echo ""
+
+version:
+	echo "#define MOLEKEL_VERSION \"$(MOLEKEL_VERSION)\"" > version.h
+	echo "#define MOLEKEL_VERSION_DATE \"$(MOLEKEL_VERSION_DATE)\"" >> version.h
+
+depend:
+	@echo "[1m""--- Computing" $(TARGET) "dependancies""[0m "
+	@echo ""
+	$(CPP) $(I_PATH) $(DEPFLAG) $(CPP_FILES) >  $(TARGET).depend
+	@echo ""
+
+clean:
+	@echo ""
+	@echo "[1m""--- Making clean""[0m "
+	@echo ""
+	/bin/rm -f $(O_FILES) $(O_CPP_FILES) ms
+	@echo ""
+
+clobber: clean depend
+	/bin/rm -f $(TARGET)
+
+addheader:
+	for i in $(H_FILES); do echo $$i; done
+
+bindist: all
+	@echo ""
+	@echo "[1m""--- Making binary distribution""[0m "
+	@echo ""
+	/bin/mkdir ../distribution/molekel
+	/bin/mkdir ../distribution/molekel/bin
+	/bin/mkdir ../distribution/molekel/lib
+	/bin/cp glutmolekel ../distribution/molekel/bin/molekel$(VERS_NAME)
+	/bin/cp molekel ../distribution/molekel/bin/molekel
+	$(ECHO) '/usr/local/bin/molekel$(VERS_NAME) \044\052' >> ../distribution/molekel/bin/molekel
+	/bin/cp ms ../distribution/molekel/lib/ms
+	/bin/cp help.txt ../distribution/molekel/lib/help.txt
+	/bin/cp atoms.data ../distribution/molekel/lib/atoms.data
+	/bin/cp LICENSE README ../distribution/molekel/lib
+	(cd ../distribution/; tar -cvf molekel$(VERS_NAME).tar molekel/bin molekel/lib)
+	(cd ../distribution/; gzip -f molekel$(VERS_NAME).tar)
+	/bin/rm -rf ../distribution/molekel
+	@echo ""
+
+cvstree:
+	@echo ""
+	@echo "[1m""--- Making cvs tree""[0m "
+	@echo ""
+	/bin/mkdir ../distribution/molekel
+	/bin/mkdir ../distribution/molekel/bin
+	/bin/mkdir ../distribution/molekel/lib
+	/bin/mkdir ../distribution/molekel/source
+	/bin/mkdir ../distribution/molekel/distribution
+	/bin/touch ../distribution/molekel/distribution/dummy
+	for i in $(H_FILES) $(CPP_FILES);\
+               do cp $$i ../distribution/molekel/source/$$i; done
+	/bin/cp ms.f ../distribution/molekel/source
+	/bin/cp Makefile glutmolekel.depend ../distribution/molekel/source
+	/bin/cp Makeflags.* ../distribution/molekel/source
+	/bin/cp Makefile-objects.$(VERSION) ../distribution/molekel/source
+	/bin/cp LICENSE README lic-head.txt ../distribution/molekel/source
+	/bin/cp molekel ../distribution/molekel/source
+	/bin/cp molekel ../distribution/molekel/bin/molekel
+	$(ECHO) '/usr/local/bin/molekel$(VERS_NAME) \044\052' >> ../distribution/molekel/bin/molekel
+	/bin/cp help.txt ../distribution/molekel/lib/help.txt
+	/bin/cp atoms.data ../distribution/molekel/lib/atoms.data
+	/bin/cp LICENSE README ../distribution/molekel/lib
+	(cd ../distribution/molekel/source; ln -sf Makeflags.sgi-n32 Makeflags)
+	/bin/cp atoms.data help.txt ../distribution/molekel/source
+	(cd ../distribution; tar -cvf molekel$(VERS_NR).cvstree.tar molekel/source molekel/lib molekel/bin molekel/distribution)
+	(cd ../distribution; gzip -f molekel$(VERS_NR).cvstree.tar)
+	/bin/rm -rf ../distribution/molekel
+	@echo ""
+
+srcdist:
+	@echo ""
+	@echo "[1m""--- Making source distribution""[0m "
+	@echo ""
+	/bin/mkdir ../distribution/molekel
+	/bin/mkdir ../distribution/molekel/bin
+	/bin/mkdir ../distribution/molekel/lib
+	/bin/mkdir ../distribution/molekel/source
+	/bin/mkdir ../distribution/molekel/distribution
+	/bin/touch ../distribution/molekel/distribution/dummy
+	for i in $(H_FILES) $(CPP_FILES);\
+               do echo /\*\  MOLEKEL, Version $(VERS_NR), Date: $(VERS_DATE)\
+                  > ../distribution/molekel/source/$$i;\
+               cat lic-head.txt >> ../distribution/molekel/source/$$i;\
+               cat $$i >> ../distribution/molekel/source/$$i; done
+	/bin/cp ms.f ../distribution/molekel/source
+	/bin/cp Makefile glutmolekel.depend ../distribution/molekel/source
+	/bin/cp Makeflags.* ../distribution/molekel/source
+	/bin/cp Makefile-objects.$(VERSION) ../distribution/molekel/source
+	/bin/cp LICENSE README lic-head.txt ../distribution/molekel/source
+	/bin/cp molekel ../distribution/molekel/source
+	/bin/cp molekel ../distribution/molekel/bin/molekel
+	$(ECHO) '/usr/local/bin/molekel$(VERS_NAME) \044\052' >> ../distribution/molekel/bin/molekel
+	/bin/cp help.txt ../distribution/molekel/lib/help.txt
+	/bin/cp atoms.data ../distribution/molekel/lib/atoms.data
+	/bin/cp LICENSE README ../distribution/molekel/lib
+	(cd ../distribution/molekel/source; ln -sf Makeflags.sgi-n32 Makeflags)
+	/bin/cp atoms.data help.txt ../distribution/molekel/source
+	(cd ../distribution; tar -cvf molekel$(VERS_NR).src.tar molekel/source molekel/lib molekel/bin molekel/distribution)
+	(cd ../distribution; gzip -f molekel$(VERS_NR).src.tar)
+	/bin/rm -rf ../distribution/molekel
+	@echo ""
+
+objdist:
+	@echo ""
+	@echo "[1m""--- Making object distribution""[0m "
+	@echo ""
+	/bin/mkdir ../distribution/molekel
+	/bin/mkdir ../distribution/molekel/bin
+	/bin/mkdir ../distribution/molekel/lib
+	/bin/mkdir ../distribution/molekel/objects
+	/bin/cp $(O_CPP_FILES) ../distribution/molekel/objects
+	/bin/cp libmui.a ../distribution/molekel/objects
+	/bin/cp Makefile-objects.$(VERSION) ../distribution/molekel/objects/Makefile
+	/bin/cp Makeflags.* ../distribution/molekel/objects
+	/bin/cp LICENSE README ../distribution/molekel/objects
+	/bin/cp molekel ../distribution/molekel/bin/molekel
+	$(ECHO) '/usr/local/bin/molekel$(VERS_NAME) \044\052' >> ../distribution/molekel/bin/molekel
+	/bin/cp ms ../distribution/molekel/lib/ms
+	/bin/cp help.txt ../distribution/molekel/lib/help.txt
+	/bin/cp atoms.data ../distribution/molekel/lib/atoms.data
+	/bin/cp LICENSE README ../distribution/molekel/lib
+	(cd ../distribution/molekel/objects; ln -sf Makeflags.sgi-n32 Makeflags)
+	(cd ../distribution; tar -cvf molekel-objects$(VERS_NAME).tar molekel/objects molekel/lib molekel/bin)
+	(cd ../distribution; gzip -f molekel-objects$(VERS_NAME).tar)
+	/bin/rm -rf ../distribution/molekel
+	@echo ""
+
+$(TARGET).depend:
+	@echo ""
+	@echo "[1m""--- Computing" $(TARGET) "dependancies""[0m "
+	@echo ""
+	$(CC) $(DEPFLAG) $(C_FILES) $(I_PATH) >  $(TARGET).depend
+	$(CPP) $(DEPFLAG) $(CPP_FILES) $(I_PATH) >>  $(TARGET).depend
+	@echo ""
+
+.INIT:
+	@echo ""
+	@echo "[1m""--- Updating " $(TARGET) " ---""[0m "
+	@echo ""
+     
+.DONE:     
+	@echo ""
+	@echo "[1m""--- "$(TARGET)" is up-to-date ---""[0m "
+	@echo ""
+
+include $(TARGET).depend 
+
+
+
+# ------------------------------------------------------------------------
+# -- Default Rules and Suffixes
+# ------------------------------------------------------------------------
+
+.SUFFIXES:
+.SUFFIXES: .x .o .c .C
+
+.c.o:
+	@echo "[1m""--- Compiling " $< "[0m "
+	@echo ""
+	$(CC)   $(I_PATH)  \
+		$(C_FLAGS) $(D_MACROS)\
+		-c $< 
+	@echo ""
+
+.C.o:
+	@echo "[1m""--- Compiling " $< "[0m "
+	@echo ""
+	$(CPP)   $(I_PATH)  \
+        $(C_FLAGS) $(D_MACROS)\
+                -c $<
+	@echo ""
+
+# DO NOT DELETE

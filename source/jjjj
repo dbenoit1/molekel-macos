@@ -1,0 +1,1418 @@
+echo "#define MOLEKEL_VERSION \""4.3.linux"\"" > version.h
+echo "#define MOLEKEL_VERSION_DATE \""`date '+%d.%b.%y'`"\"" >> version.h
+[1m--- Compiling  browser.C [0m 
+
+g++   -I/Library/Frameworks/GLUI.framework/Headers/  \
+         -DLINUX\
+                -c browser.C
+In file included from browser.C:71:
+In file included from ./main.h:29:
+/Library/Frameworks/GLUI.framework/Headers/glui.h:513:48: warning: 'glutDisplayFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    void set_glutDisplayFunc(void (*f)(void)) {glutDisplayFunc(f);}
+                                               ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:505:22: note: 'glutDisplayFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutDisplayFunc(void (*func)(void)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from browser.C:71:
+In file included from ./main.h:29:
+/Library/Frameworks/GLUI.framework/Headers/glui.h:515:9: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    { ::glutTimerFunc(millis,f,value);}
+        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from browser.C:71:
+In file included from ./main.h:29:
+/Library/Frameworks/GLUI.framework/Headers/glui.h:516:53: warning: 'glutOverlayDisplayFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    void set_glutOverlayDisplayFunc(void(*f)(void)){glutOverlayDisplayFunc(f);}
+                                                    ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:527:22: note: 'glutOverlayDisplayFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutOverlayDisplayFunc(void (*func)(void)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from browser.C:71:
+In file included from ./main.h:29:
+/Library/Frameworks/GLUI.framework/Headers/glui.h:517:51: warning: 'glutSpaceballMotionFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    void set_glutSpaceballMotionFunc(Int3_CB f)  {glutSpaceballMotionFunc(f);}
+                                                  ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:518:22: note: 'glutSpaceballMotionFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutSpaceballMotionFunc(void (*func)(int x, int y, int z)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from browser.C:71:
+In file included from ./main.h:29:
+/Library/Frameworks/GLUI.framework/Headers/glui.h:518:51: warning: 'glutSpaceballRotateFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    void set_glutSpaceballRotateFunc(Int3_CB f)  {glutSpaceballRotateFunc(f);}
+                                                  ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:519:22: note: 'glutSpaceballRotateFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutSpaceballRotateFunc(void (*func)(int x, int y, int z)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from browser.C:71:
+In file included from ./main.h:29:
+/Library/Frameworks/GLUI.framework/Headers/glui.h:519:51: warning: 'glutSpaceballButtonFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    void set_glutSpaceballButtonFunc(Int2_CB f)  {glutSpaceballButtonFunc(f);}
+                                                  ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:520:22: note: 'glutSpaceballButtonFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutSpaceballButtonFunc(void (*func)(int button, int state)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from browser.C:71:
+In file included from ./main.h:29:
+/Library/Frameworks/GLUI.framework/Headers/glui.h:520:54: warning: 'glutTabletMotionFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    void set_glutTabletMotionFunc(Int2_CB f)        {glutTabletMotionFunc(f);}
+                                                     ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:523:22: note: 'glutTabletMotionFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTabletMotionFunc(void (*func)(int x, int y)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from browser.C:71:
+In file included from ./main.h:29:
+/Library/Frameworks/GLUI.framework/Headers/glui.h:521:54: warning: 'glutTabletButtonFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    void set_glutTabletButtonFunc(Int4_CB f)        {glutTabletButtonFunc(f);}
+                                                     ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:524:22: note: 'glutTabletButtonFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTabletButtonFunc(void (*func)(int button, int state, int x, int y)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from browser.C:71:
+In file included from ./main.h:29:
+/Library/Frameworks/GLUI.framework/Headers/glui.h:523:56: warning: 'glutMenuStatusFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    void set_glutMenuStatusFunc(Int3_CB f)            {glutMenuStatusFunc(f);}
+                                                       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:526:22: note: 'glutMenuStatusFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutMenuStatusFunc(void (*func)(int status, int x, int y)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from browser.C:71:
+In file included from ./main.h:29:
+/Library/Frameworks/GLUI.framework/Headers/glui.h:524:57: warning: 'glutMenuStateFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    void set_glutMenuStateFunc(Int1_CB f)              {glutMenuStateFunc(f);}
+                                                        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:515:22: note: 'glutMenuStateFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutMenuStateFunc(void (*func)(int state)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from browser.C:71:
+In file included from ./main.h:29:
+/Library/Frameworks/GLUI.framework/Headers/glui.h:525:57: warning: 'glutButtonBoxFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    void set_glutButtonBoxFunc(Int2_CB f)              {glutButtonBoxFunc(f);}
+                                                        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:521:22: note: 'glutButtonBoxFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutButtonBoxFunc(void (*func)(int button, int state)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from browser.C:71:
+In file included from ./main.h:29:
+/Library/Frameworks/GLUI.framework/Headers/glui.h:526:61: warning: 'glutDialsFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    void set_glutDialsFunc(Int2_CB f)                      {glutDialsFunc(f);}  
+                                                            ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:522:22: note: 'glutDialsFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutDialsFunc(void (*func)(int dial, int value)) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+In file included from browser.C:71:
+In file included from ./main.h:29:
+/Library/Frameworks/GLUI.framework/Headers/glui.h:868:6: warning: 'glTranslatef' is deprecated: first deprecated in macOS 10.14 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    {glTranslatef((float)x_abs+.5,(float)y_abs+.5,0.0);}
+     ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gl.h:2729:13: note: 'glTranslatef' has been explicitly marked deprecated here
+extern void glTranslatef (GLfloat x, GLfloat y, GLfloat z) OPENGL_DEPRECATED(10.0, 10.14);
+            ^
+In file included from browser.C:71:
+In file included from ./main.h:29:
+/Library/Frameworks/GLUI.framework/Headers/glui.h:932:24: warning: equality comparison result unused [-Wunused-comparison]
+        last_live_text == "";
+        ~~~~~~~~~~~~~~~^~~~~
+/Library/Frameworks/GLUI.framework/Headers/glui.h:932:24: note: use '=' to turn this equality comparison into an assignment
+        last_live_text == "";
+                       ^~
+                       =
+/Library/Frameworks/GLUI.framework/Headers/glui.h:2440:5: warning: 'GLUquadricObj' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    GLUquadricObj *quadObj;
+    ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:224:26: note: 'GLUquadricObj' has been explicitly marked deprecated here
+typedef class GLUquadric GLUquadricObj OPENGL_DEPRECATED(10.0, 10.9);
+                         ^
+In file included from browser.C:71:
+In file included from ./main.h:29:
+/Library/Frameworks/GLUI.framework/Headers/glui.h:2497:5: warning: 'GLUquadricObj' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    GLUquadricObj *quadObj;
+    ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework/Headers/glu.h:224:26: note: 'GLUquadricObj' has been explicitly marked deprecated here
+typedef class GLUquadric GLUquadricObj OPENGL_DEPRECATED(10.0, 10.9);
+                         ^
+browser.C:126:13: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char    *dot = ".";
+               ^
+browser.C:127:16: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char    *dotdot = "..";
+                  ^
+browser.C:155:20: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *pdb_ext[] = {".pdb", ".ent", NULL};
+                   ^
+browser.C:155:28: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *pdb_ext[] = {".pdb", ".ent", NULL};
+                           ^
+browser.C:156:20: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *xyz_ext[] = {".xyz", NULL};
+                   ^
+browser.C:157:21: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *macu_ext[] = {".macu", NULL};
+                    ^
+browser.C:158:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *gcube_ext[] = {".cube", ".dat", NULL};
+                     ^
+browser.C:158:31: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *gcube_ext[] = {".cube", ".dat", NULL};
+                              ^
+browser.C:159:20: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *t21_ext[] = {".t21", NULL};
+                   ^
+browser.C:160:20: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *t41_ext[] = {".t41", ".ft41", NULL};
+                   ^
+browser.C:160:28: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *t41_ext[] = {".t41", ".ft41", NULL};
+                           ^
+browser.C:161:20: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *ms_ext[]  = {".ms", NULL};
+                   ^
+browser.C:162:20: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *out_ext[] = {".out", ".log", NULL};
+                   ^
+browser.C:162:28: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *out_ext[] = {".out", ".log", NULL};
+                           ^
+browser.C:163:20: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *pun_ext[] = {".pun", NULL};
+                   ^
+browser.C:164:20: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *mkl_ext[] = {".mkl", NULL};
+                   ^
+browser.C:165:23: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *molden_ext[] = {".molf", NULL};
+                      ^
+browser.C:166:20: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *sld_ext[] = {".sld", NULL};
+                   ^
+browser.C:167:20: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *eht_ext[] = {".eht", NULL};
+                   ^
+browser.C:168:23: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *ehtout_ext[] = {".ehtout", NULL};
+                      ^
+browser.C:169:21: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *qual_ext[] = {".qual", ".eint", ".nddo", ".mull", ".ct", ".rep", ".eorb", ".esol", ".eint2", NULL};
+                    ^
+browser.C:169:30: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *qual_ext[] = {".qual", ".eint", ".nddo", ".mull", ".ct", ".rep", ".eorb", ".esol", ".eint2", NULL};
+                             ^
+browser.C:169:39: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *qual_ext[] = {".qual", ".eint", ".nddo", ".mull", ".ct", ".rep", ".eorb", ".esol", ".eint2", NULL};
+                                      ^
+browser.C:169:48: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *qual_ext[] = {".qual", ".eint", ".nddo", ".mull", ".ct", ".rep", ".eorb", ".esol", ".eint2", NULL};
+                                               ^
+browser.C:169:57: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *qual_ext[] = {".qual", ".eint", ".nddo", ".mull", ".ct", ".rep", ".eorb", ".esol", ".eint2", NULL};
+                                                        ^
+browser.C:169:64: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *qual_ext[] = {".qual", ".eint", ".nddo", ".mull", ".ct", ".rep", ".eorb", ".esol", ".eint2", NULL};
+                                                               ^
+browser.C:169:72: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *qual_ext[] = {".qual", ".eint", ".nddo", ".mull", ".ct", ".rep", ".eorb", ".esol", ".eint2", NULL};
+                                                                       ^
+browser.C:169:81: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *qual_ext[] = {".qual", ".eint", ".nddo", ".mull", ".ct", ".rep", ".eorb", ".esol", ".eint2", NULL};
+                                                                                ^
+browser.C:169:90: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *qual_ext[] = {".qual", ".eint", ".nddo", ".mull", ".ct", ".rep", ".eorb", ".esol", ".eint2", NULL};
+                                                                                         ^
+browser.C:170:21: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *masq_ext[] = {".masq", NULL};
+                    ^
+browser.C:171:20: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *rgb_ext[] = {".rgb", ".bw", NULL};
+                   ^
+browser.C:171:28: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *rgb_ext[] = {".rgb", ".bw", NULL};
+                           ^
+browser.C:172:20: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *tif_ext[] = {".tif", NULL};
+                   ^
+browser.C:173:24: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *spartan_ext[] = {".input", NULL};
+                       ^
+browser.C:174:20: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *mos_ext[] = {".out", ".mos", NULL};
+                   ^
+browser.C:174:28: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *mos_ext[] = {".out", ".mos", NULL};
+                           ^
+browser.C:175:23: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *nboorb_ext[] = {".orb", NULL};
+                      ^
+browser.C:176:20: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *ppm_ext[] = {".ppm", NULL};
+                   ^
+browser.C:177:21: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *jpeg_ext[] = {".jpg", NULL};
+                    ^
+browser.C:178:23: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+char *dotval_ext[] = {".dtv", NULL};
+                      ^
+browser.C:188:7: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+      sprintf(rstr, ".....%s", dir+(len - 47));
+      ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:213:10: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+         sprintf(str, "dipole moment: %8.4f Debye", actualmol->dipole->absolute);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:214:12: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+      else sprintf(str, "no dipole moment info");
+           ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:226:15: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+   green_note("reading/writing");
+              ^
+browser.C:317:25: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+               logprint(" it is a macu file");
+                        ^
+browser.C:322:25: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+               logprint(" it is a gaussian cube file");
+                        ^
+browser.C:327:25: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+               logprint(" it is a adf tape41 file");
+                        ^
+browser.C:370:33: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         writergb_rle(filename, "molekel", imgx, imgy);
+                                ^
+browser.C:373:10: error: no matching function for call to 'writetiff'
+         writetiff(filename, "molekel", imgx, imgy , "none");
+         ^~~~~~~~~
+./snap.h:108:6: note: candidate function not viable: no known conversion from 'const char[5]' to 'int' for 5th argument
+void writetiff(char *filename, char *description,
+     ^
+browser.C:376:10: error: no matching function for call to 'writetiff'
+         writetiff(filename, "molekel", imgx, imgy ,"LZW");
+         ^~~~~~~~~
+./snap.h:108:6: note: candidate function not viable: no known conversion from 'const char[4]' to 'int' for 5th argument
+void writetiff(char *filename, char *description,
+     ^
+browser.C:379:10: error: no matching function for call to 'writetiff'
+         writetiff(filename, "molekel", imgx, imgy ,"PackBits");
+         ^~~~~~~~~
+./snap.h:108:6: note: candidate function not viable: no known conversion from 'const char[9]' to 'int' for 5th argument
+void writetiff(char *filename, char *description,
+     ^
+browser.C:445:4: warning: 'glutPostRedisplay' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+   glutPostRedisplay();
+   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:444:22: note: 'glutPostRedisplay' has been explicitly marked deprecated here
+extern void APIENTRY glutPostRedisplay(void) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:483:4: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+   sprintf(fname, "%s%s%s", actual_directory, SEPARATOR, file);
+   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:489:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:490:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading XYZ");
+                  ^
+browser.C:492:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:496:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:497:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading multiple XYZ");
+                  ^
+browser.C:499:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:503:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:504:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading PDB");
+                  ^
+browser.C:506:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:510:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:511:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading multiple PDB");
+                  ^
+browser.C:513:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:517:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:518:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading GAUSSIAN LOG");
+                  ^
+browser.C:520:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:524:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:525:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading GAMESS US LOG");
+                  ^
+browser.C:527:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:531:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:532:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading HONDO LOG");
+                  ^
+browser.C:534:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:538:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:539:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading HONDO PUNCH");
+                  ^
+browser.C:541:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:545:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:546:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading ADF LOG");
+                  ^
+browser.C:548:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:552:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:553:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Selecting T21");
+                  ^
+browser.C:555:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:559:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:560:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading MOS");
+                  ^
+browser.C:562:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:566:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:567:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading PRDDO");
+                  ^
+browser.C:569:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:573:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:574:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading ZINDO");
+                  ^
+browser.C:576:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:580:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:581:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading MKL");
+                  ^
+browser.C:583:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:587:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:588:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading MOLDEN FILE");
+                  ^
+browser.C:590:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:594:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:595:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading MOLDEN FREQ FILE");
+                  ^
+browser.C:597:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:601:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:602:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading MOLDEN GEOM FILE");
+                  ^
+browser.C:604:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:608:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:609:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading nbo orbitals");
+                  ^
+browser.C:611:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:615:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:616:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading MS");
+                  ^
+browser.C:618:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:622:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:623:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading dots with values");
+                  ^
+browser.C:625:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:629:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:630:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading SLD");
+                  ^
+browser.C:632:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:636:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:637:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading GAUSSIAN CUBE");
+                  ^
+browser.C:639:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:645:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:646:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading density file");
+                  ^
+browser.C:648:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:660:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:661:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Loading texture");
+                  ^
+browser.C:663:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:669:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("");
+                     ^
+browser.C:670:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("Saving XYZ (orig. orient.)");
+                     ^
+browser.C:672:13: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+            glutTimerFunc(1, timer_cb, file_select_key);
+            ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:679:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("");
+                     ^
+browser.C:680:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("Saving XYZ (current orient.)");
+                     ^
+browser.C:682:13: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+            glutTimerFunc(1, timer_cb, file_select_key);
+            ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:689:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("");
+                     ^
+browser.C:690:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("Saving PDB (orig. orient.)");
+                     ^
+browser.C:692:13: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+            glutTimerFunc(1, timer_cb, file_select_key);
+            ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:699:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("");
+                     ^
+browser.C:700:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("Saving PDB (current orient.)");
+                     ^
+browser.C:702:13: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+            glutTimerFunc(1, timer_cb, file_select_key);
+            ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:709:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("");
+                     ^
+browser.C:710:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("Saving MS");
+                     ^
+browser.C:712:13: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+            glutTimerFunc(1, timer_cb, file_select_key);
+            ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:719:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("");
+                     ^
+browser.C:720:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("Saving dots with value");
+                     ^
+browser.C:722:13: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+            glutTimerFunc(1, timer_cb, file_select_key);
+            ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:729:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("");
+                     ^
+browser.C:730:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("Saving SLD");
+                     ^
+browser.C:732:13: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+            glutTimerFunc(1, timer_cb, file_select_key);
+            ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:739:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("");
+                     ^
+browser.C:740:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("Saving RGB");
+                     ^
+browser.C:742:13: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+            glutTimerFunc(1, timer_cb, file_select_key);
+            ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:749:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("");
+                     ^
+browser.C:750:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("Saving TIFF");
+                     ^
+browser.C:752:13: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+            glutTimerFunc(1, timer_cb, file_select_key);
+            ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:759:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("");
+                     ^
+browser.C:760:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("Saving TIFF LZW");
+                     ^
+browser.C:762:13: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+            glutTimerFunc(1, timer_cb, file_select_key);
+            ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:769:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("");
+                     ^
+browser.C:770:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("Saving TIFF packbits");
+                     ^
+browser.C:772:13: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+            glutTimerFunc(1, timer_cb, file_select_key);
+            ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:779:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("");
+                     ^
+browser.C:780:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("Saving JPEG");
+                     ^
+browser.C:782:13: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+            glutTimerFunc(1, timer_cb, file_select_key);
+            ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:794:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("");
+                     ^
+browser.C:795:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            logprint("Rendering image");
+                     ^
+browser.C:797:13: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+            glutTimerFunc(1, timer_cb, file_select_key);
+            ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:807:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:808:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Rendering structure images");
+                  ^
+browser.C:810:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:819:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("");
+                  ^
+browser.C:820:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         logprint("Rendering freq images");
+                  ^
+browser.C:822:10: warning: 'glutTimerFunc' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+         glutTimerFunc(1, timer_cb, file_select_key);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:514:22: note: 'glutTimerFunc' has been explicitly marked deprecated here
+extern void APIENTRY glutTimerFunc(unsigned int millis, void (*func)(int value), int value) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:857:13: warning: 'glutSetWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+            glutSetWindow(mainwin);
+            ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:450:22: note: 'glutSetWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutSetWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:858:25: warning: 'glutDestroyWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+            if(filewin) glutDestroyWindow(filewin);
+                        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:443:22: note: 'glutDestroyWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutDestroyWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:859:23: warning: implicit conversion of NULL constant to 'int' [-Wnull-conversion]
+            filewin = NULL;
+                    ~ ^~~~
+                      0
+browser.C:891:9: warning: 'glutSetWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+        glutSetWindow(mainwin);
+        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:450:22: note: 'glutSetWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutSetWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:892:21: warning: 'glutDestroyWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+        if(filewin) glutDestroyWindow(filewin);
+                    ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:443:22: note: 'glutDestroyWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutDestroyWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:893:19: warning: implicit conversion of NULL constant to 'int' [-Wnull-conversion]
+        filewin = NULL;
+                ~ ^~~~
+                  0
+browser.C:909:8: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    cd("..");
+       ^
+browser.C:916:8: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    cd(".");
+       ^
+browser.C:925:5: warning: 'glutSetWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    glutSetWindow(mainwin);
+    ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:450:22: note: 'glutSetWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutSetWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:926:17: warning: 'glutDestroyWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    if(filewin) glutDestroyWindow(filewin);
+                ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:443:22: note: 'glutDestroyWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutDestroyWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:927:15: warning: implicit conversion of NULL constant to 'int' [-Wnull-conversion]
+    filewin = NULL;
+            ~ ^~~~
+              0
+browser.C:966:5: warning: 'glutSetWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    glutSetWindow(mainwin);
+    ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:450:22: note: 'glutSetWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutSetWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:967:17: warning: 'glutDestroyWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    if(filewin) glutDestroyWindow(filewin);
+                ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:443:22: note: 'glutDestroyWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutDestroyWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:968:15: warning: implicit conversion of NULL constant to 'int' [-Wnull-conversion]
+    filewin = NULL;
+            ~ ^~~~
+              0
+browser.C:982:35: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    l1 = muiNewBoldLabel(10, 475, "Directory:");
+                                  ^
+browser.C:985:31: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    l4 = muiNewLabel(80, 475, "./");
+                              ^
+browser.C:990:35: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    l2 = muiNewBoldLabel(10, 430, "Set directory:");
+                                  ^
+browser.C:993:23: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    muiLoadButton(b1, "Up");
+                      ^
+browser.C:997:23: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    muiLoadButton(b2, "Original");
+                      ^
+browser.C:1003:25: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    muiLoadButton(trb1, "Filter:");
+                        ^
+browser.C:1007:44: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+       pl[i] = muiNewLabel(30, 305 - 15*i, "");
+                                           ^
+browser.C:1021:34: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    l3 = muiNewBoldLabel(10, 50, "Open File/Path:");
+                                 ^
+browser.C:1024:23: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    muiLoadButton(b3, "Accept");
+                      ^
+browser.C:1028:23: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    muiLoadButton(b4, "Cancel");
+                      ^
+browser.C:1042:5: warning: 'glutSetWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    glutSetWindow(filewin);
+    ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:450:22: note: 'glutSetWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutSetWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1052:36: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+             muiChangeLabel(pl[i], "");
+                                   ^
+browser.C:1055:35: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+       else muiChangeLabel(pl[i], "");
+                                  ^
+browser.C:1059:5: warning: 'glutShowWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    glutShowWindow();
+    ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:458:22: note: 'glutShowWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutShowWindow(void) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1060:5: warning: 'glutPopWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    glutPopWindow();
+    ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:455:22: note: 'glutPopWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutPopWindow(void) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1119:16: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                        showinfobox("pwd: cannot stat .!\n");
+                                    ^
+browser.C:1123:16: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                        showinfobox("pwd: cannot open ..\n");
+                                    ^
+browser.C:1131:16: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                        showinfobox("pwd: cannot stat ..!\n");
+                                    ^
+browser.C:1135:16: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                        showinfobox("pwd: cannot chdir to ..\n");
+                                    ^
+browser.C:1146:18: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                                        showinfobox("pwd: read error in ..\n");
+                                                    ^
+browser.C:1153:18: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                                        showinfobox("pwd: read error in ..\n");
+                                                    ^
+browser.C:1200:21: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+           logprint("bad directory!");
+                    ^
+browser.C:1207:20: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+       showinfobox("Can't allocate string-pointer");
+                   ^
+browser.C:1228:30: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                 showinfobox("Can't allocate string-pointer");
+                             ^
+browser.C:1239:33: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+                    showinfobox("Can't allocate string-pointer");
+                                ^
+browser.C:1253:27: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+              showinfobox("Can't allocate string-pointer");
+                          ^
+browser.C:1268:2: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+        sprintf(str,"cannot open:\n%s !",s);
+        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:1288:8: warning: 'glutSetWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       glutSetWindow(filewin);
+       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:450:22: note: 'glutSetWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutSetWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1289:8: warning: 'glutShowWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       glutShowWindow();
+       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:458:22: note: 'glutShowWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutShowWindow(void) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1290:8: warning: 'glutPopWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       glutPopWindow();
+       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:455:22: note: 'glutPopWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutPopWindow(void) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1293:8: warning: 'glutInitWindowPosition' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       glutInitWindowPosition(winposition[0], winposition[1]);
+       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:436:22: note: 'glutInitWindowPosition' has been explicitly marked deprecated here
+extern void APIENTRY glutInitWindowPosition(int x, int y) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1294:8: warning: 'glutInitWindowSize' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       glutInitWindowSize(400, 500);
+       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:437:22: note: 'glutInitWindowSize' has been explicitly marked deprecated here
+extern void APIENTRY glutInitWindowSize(int width, int height) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1295:8: warning: 'glutInitDisplayMode' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       glutInitDisplayMode( GLUT_RGB | GLUT_DOUBLE );
+       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:432:22: note: 'glutInitDisplayMode' has been explicitly marked deprecated here
+extern void APIENTRY glutInitDisplayMode(unsigned int mode) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1296:18: warning: 'glutCreateWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       filewin = glutCreateWindow("file browser");
+                 ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:441:21: note: 'glutCreateWindow' has been explicitly marked deprecated here
+extern int APIENTRY glutCreateWindow(const char *title) OPENGL_DEPRECATED(10_0, 10_9);
+                    ^
+browser.C:1315:10: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+         sprintf(str, "you selected orbital %d ", o_choice/2 + molptr->firstOrbital);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:1326:10: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+         sprintf(str, "you selected orbital %d\n", o_choice + molptr->firstOrbital);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:1330:7: warning: 'glutSetWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+      glutSetWindow(mainwin);
+      ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:450:22: note: 'glutSetWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutSetWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1331:18: warning: 'glutDestroyWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+      if(orbwin) glutDestroyWindow(orbwin);
+                 ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:443:22: note: 'glutDestroyWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutDestroyWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1332:16: warning: implicit conversion of NULL constant to 'int' [-Wnull-conversion]
+      orbwin = NULL;
+             ~ ^~~~
+               0
+browser.C:1338:16: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+      logprint("");
+               ^
+browser.C:1353:5: warning: 'glutSetWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    glutSetWindow(mainwin);
+    ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:450:22: note: 'glutSetWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutSetWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1354:16: warning: 'glutDestroyWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    if(orbwin) glutDestroyWindow(orbwin);
+               ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:443:22: note: 'glutDestroyWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutDestroyWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1355:14: warning: implicit conversion of NULL constant to 'int' [-Wnull-conversion]
+    orbwin = NULL;
+           ~ ^~~~
+             0
+browser.C:1373:10: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+         sprintf(str, "you selected orbital %d ", o_choice/2 + molptr->firstOrbital);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:1385:10: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+         sprintf(str, "you selected orbital %d\n", o_choice + molptr->firstOrbital);
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:1389:7: warning: 'glutSetWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+      glutSetWindow(mainwin);
+      ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:450:22: note: 'glutSetWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutSetWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1390:18: warning: 'glutDestroyWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+      if(orbwin) glutDestroyWindow(orbwin);
+                 ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:443:22: note: 'glutDestroyWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutDestroyWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1391:16: warning: implicit conversion of NULL constant to 'int' [-Wnull-conversion]
+      orbwin = NULL;
+             ~ ^~~~
+               0
+browser.C:1397:16: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+      logprint("");
+               ^
+browser.C:1431:35: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    l1 = muiNewBoldLabel(10, 475, "Select Orbital:");
+                                  ^
+browser.C:1433:32: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    l2 = muiNewLabel(140, 475, "MO       Eigenvalue      Occupation");
+                               ^
+browser.C:1443:23: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    muiLoadButton(b1, "Cancel");
+                      ^
+browser.C:1447:23: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    muiLoadButton(b2, "Accept");
+                      ^
+browser.C:1457:8: warning: 'glutSetWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       glutSetWindow(orbwin);
+       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:450:22: note: 'glutSetWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutSetWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1458:8: warning: 'glutShowWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       glutShowWindow();
+       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:458:22: note: 'glutShowWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutShowWindow(void) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1459:8: warning: 'glutPopWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       glutPopWindow();
+       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:455:22: note: 'glutPopWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutPopWindow(void) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1462:8: warning: 'glutInitWindowPosition' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       glutInitWindowPosition(winposition[0], winposition[1]);
+       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:436:22: note: 'glutInitWindowPosition' has been explicitly marked deprecated here
+extern void APIENTRY glutInitWindowPosition(int x, int y) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1463:8: warning: 'glutInitWindowSize' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       glutInitWindowSize(400, 500);
+       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:437:22: note: 'glutInitWindowSize' has been explicitly marked deprecated here
+extern void APIENTRY glutInitWindowSize(int width, int height) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1464:8: warning: 'glutInitDisplayMode' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       glutInitDisplayMode( GLUT_RGB | GLUT_DOUBLE );
+       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:432:22: note: 'glutInitDisplayMode' has been explicitly marked deprecated here
+extern void APIENTRY glutInitDisplayMode(unsigned int mode) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1465:17: warning: 'glutCreateWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       orbwin = glutCreateWindow("select orbital");
+                ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:441:21: note: 'glutCreateWindow' has been explicitly marked deprecated here
+extern int APIENTRY glutCreateWindow(const char *title) OPENGL_DEPRECATED(10_0, 10_9);
+                    ^
+browser.C:1484:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+      showinfobox("Can't allocate string-pointer");
+                  ^
+browser.C:1489:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+      showinfobox("Can't allocate selector-string");
+                  ^
+browser.C:1498:10: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+         sprintf(str, "%3d alpha   %10.5f          %5.3f  %s", i+mp->firstOrbital,
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:1503:25: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            showinfobox("Can't allocate selector-string");
+                        ^
+browser.C:1506:10: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+         sprintf(str, "    beta    %10.5f          %5.3f  %s",
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:1511:25: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            showinfobox("Can't allocate selector-string");
+                        ^
+browser.C:1518:10: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+         sprintf(str, "    %3d   %10.5f          %5.3f  %s", i+mp->firstOrbital,
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:1523:25: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+            showinfobox("Can't allocate selector-string");
+                        ^
+browser.C:1528:4: warning: 'glutSetWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+   glutSetWindow(orbwin);
+   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:450:22: note: 'glutSetWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutSetWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1530:4: warning: 'glutShowWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+   glutShowWindow();
+   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:458:22: note: 'glutShowWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutShowWindow(void) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1531:4: warning: 'glutPopWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+   glutPopWindow();
+   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:455:22: note: 'glutPopWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutPopWindow(void) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1546:7: warning: 'glutSetWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+      glutSetWindow(mainwin);
+      ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:450:22: note: 'glutSetWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutSetWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1547:19: warning: 'glutDestroyWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+      if(freqwin) glutDestroyWindow(freqwin);
+                  ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:443:22: note: 'glutDestroyWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutDestroyWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1548:17: warning: implicit conversion of NULL constant to 'int' [-Wnull-conversion]
+      freqwin = NULL;
+              ~ ^~~~
+                0
+browser.C:1551:10: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+         sprintf(str, "%5.0f/cm %s", actualvib->frequency, actualvib->type); 
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:1555:10: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+         sprintf(str, "no frequency selected");
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:1558:7: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+      sprintf(str, "freq %3d %5.0f/cm selected", f_choice+1, actualvib->frequency); 
+      ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:1563:16: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+      logprint("");
+               ^
+browser.C:1581:5: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+    sprintf(str, "no frequency selected");
+    ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:1584:5: warning: 'glutSetWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    glutSetWindow(mainwin);
+    ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:450:22: note: 'glutSetWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutSetWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1585:17: warning: 'glutDestroyWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+    if(freqwin) glutDestroyWindow(freqwin);
+                ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:443:22: note: 'glutDestroyWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutDestroyWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1586:15: warning: implicit conversion of NULL constant to 'int' [-Wnull-conversion]
+    freqwin = NULL;
+            ~ ^~~~
+              0
+browser.C:1601:7: warning: 'glutSetWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+      glutSetWindow(mainwin);
+      ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:450:22: note: 'glutSetWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutSetWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1602:19: warning: 'glutDestroyWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+      if(freqwin) glutDestroyWindow(freqwin);
+                  ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:443:22: note: 'glutDestroyWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutDestroyWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1603:17: warning: implicit conversion of NULL constant to 'int' [-Wnull-conversion]
+      freqwin = NULL;
+              ~ ^~~~
+                0
+browser.C:1606:10: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+         sprintf(str, "%5.0f/cm %s", actualvib->frequency, actualvib->type); 
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:1609:10: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+         sprintf(str, "no frequency selected");
+         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:1613:7: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+      sprintf(str, "freq %3d %5.0f/cm selected", f_choice+1, actualvib->frequency); 
+      ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:1618:16: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+      logprint("");
+               ^
+browser.C:1649:35: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    l1 = muiNewBoldLabel(10, 475, "Select Frequency:");
+                                  ^
+browser.C:1651:32: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    l2 = muiNewLabel(147, 475, "No        1/cm        Symmetry");
+                               ^
+browser.C:1661:23: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    muiLoadButton(b1, "Cancel");
+                      ^
+browser.C:1665:23: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+    muiLoadButton(b2, "Accept");
+                      ^
+browser.C:1675:8: warning: 'glutSetWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       glutSetWindow(freqwin);
+       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:450:22: note: 'glutSetWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutSetWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1676:8: warning: 'glutShowWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       glutShowWindow();
+       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:458:22: note: 'glutShowWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutShowWindow(void) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1677:8: warning: 'glutPopWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       glutPopWindow();
+       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:455:22: note: 'glutPopWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutPopWindow(void) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1680:8: warning: 'glutInitWindowPosition' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       glutInitWindowPosition(winposition[0], winposition[1]);
+       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:436:22: note: 'glutInitWindowPosition' has been explicitly marked deprecated here
+extern void APIENTRY glutInitWindowPosition(int x, int y) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1681:8: warning: 'glutInitWindowSize' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       glutInitWindowSize(400, 500);
+       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:437:22: note: 'glutInitWindowSize' has been explicitly marked deprecated here
+extern void APIENTRY glutInitWindowSize(int width, int height) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1682:8: warning: 'glutInitDisplayMode' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       glutInitDisplayMode( GLUT_RGB | GLUT_DOUBLE );
+       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:432:22: note: 'glutInitDisplayMode' has been explicitly marked deprecated here
+extern void APIENTRY glutInitDisplayMode(unsigned int mode) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1683:18: warning: 'glutCreateWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+       freqwin = glutCreateWindow("select frequency");
+                 ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:441:21: note: 'glutCreateWindow' has been explicitly marked deprecated here
+extern int APIENTRY glutCreateWindow(const char *title) OPENGL_DEPRECATED(10_0, 10_9);
+                    ^
+browser.C:1701:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+      showinfobox("Can't allocate string-pointer");
+                  ^
+browser.C:1706:19: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+      showinfobox("Can't allocate selector-string");
+                  ^
+browser.C:1714:7: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+      sprintf(str, "    %3d   %12.2f   %s", i+1, actualmol->vibration[i].frequency,
+      ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+browser.C:1717:22: warning: conversion from string literal to 'char *' is deprecated [-Wc++11-compat-deprecated-writable-strings]
+         showinfobox("Can't allocate selector-string");
+                     ^
+browser.C:1722:4: warning: 'glutSetWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+   glutSetWindow(freqwin);
+   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:450:22: note: 'glutSetWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutSetWindow(int win) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1724:4: warning: 'glutShowWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+   glutShowWindow();
+   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:458:22: note: 'glutShowWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutShowWindow(void) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+browser.C:1725:4: warning: 'glutPopWindow' is deprecated: first deprecated in macOS 10.9 - OpenGL API deprecated. (Define GL_SILENCE_DEPRECATION to silence these warnings) [-Wdeprecated-declarations]
+   glutPopWindow();
+   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h:455:22: note: 'glutPopWindow' has been explicitly marked deprecated here
+extern void APIENTRY glutPopWindow(void) OPENGL_DEPRECATED(10_0, 10_9);
+                     ^
+304 warnings and 3 errors generated.
+make: *** [browser.o] Error 1
