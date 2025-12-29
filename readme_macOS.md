@@ -22,7 +22,7 @@ void pwd(void) {
 }
 ```
 
-### snap.C (Header Fixes)
+### snap.C (header fixes)
 
 Legacy Linux paths were updated to Homebrew paths:
 
@@ -32,7 +32,7 @@ Added `#include <tiffio.h>`
 
 Added `typedef uint32_t uint32;` to fix architecture-specific integer errors.
 
-### libmui (The UI Library)
+### libmui (the UI Library)
 Because the provided libmui.a was built for Intel/SGI, the source files in the mui/ folder had to be recompiled for arm64.
 
 ### Compilation Commands (added/included in new Makefile)
