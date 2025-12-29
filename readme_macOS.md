@@ -45,14 +45,14 @@ C++ Components
 ### Final Linking Command
 Links against the macOS native OpenGL and GLUT frameworks instead of the old X11 libraries:
 
-`g++ -Wno-deprecated-declarations -w -DLINUX -o glutmolekel \
-    *.o \
-    -L/opt/homebrew/lib \
-    -lglui -ltiff -ljpeg -lglfw \
-    -framework OpenGL \
-    -framework GLUT \
-    -framework Cocoa \
-    ./libmui.a -lm`
+`g++ -Wno-deprecated-declarations -w -DLINUX -o glutmolekel \`
+`    *.o \`
+`    -L/opt/homebrew/lib \`
+`    -lglui -ltiff -ljpeg -lglfw \`
+`    -framework OpenGL \`
+`    -framework GLUT \`
+`    -framework Cocoa \`
+`    ./libmui.a -lm`
 
 ## Note:
 Menu Warnings: macOS will log "Internal inconsistency in menus." These are harmless and caused by the legacy GLUT implementation; they do not affect the program's functionality.
