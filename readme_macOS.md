@@ -4,9 +4,9 @@ This repository contains a ported version of Molekel 4.3, updated to compile on 
 
 ## Quick Start
 1. Install dependencies: `brew install glui libtiff jpeg glfw gfortran`
-2. Run `make`
-3. Run `codesign --force --deep --sign - ./bin/glutmolekel`
-4. Launch via `./molekel`
+2. `cd source`
+3. Run `make`
+4. Launch via `./bin/molekel`
 
 This document outlines the steps and modifications required to compile and run this legacy version of Molekel on modern macOS.
 2. Key Code Modifications
