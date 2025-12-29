@@ -61,3 +61,8 @@ g++ -Wno-deprecated-declarations -w -DLINUX -o glutmolekel \
 ## Note:
 Menu Warnings: macOS will log "Internal inconsistency in menus." These are harmless and caused by the legacy GLUT implementation; they do not affect the program's functionality.
 
+## License
+This project is licensed under the GNU General Public License (GPL). 
+Original Molekel source code remains the property of the original authors. 
+The patches and build system for macOS are provided under the same license.
+
