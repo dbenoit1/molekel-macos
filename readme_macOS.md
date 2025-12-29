@@ -42,20 +42,18 @@ C++ Components
 
 `g++ -I/opt/homebrew/include -Wno-deprecated-declarations -w -DLINUX -c *.C`
 
-4. Final Linking Command
-This command links the object files against the macOS native OpenGL and GLUT frameworks instead of the old X11 libraries:
+### Final Linking Command
+Links against the macOS native OpenGL and GLUT frameworks instead of the old X11 libraries:
 
-Bash
-g++ -Wno-deprecated-declarations -w -DLINUX -o glutmolekel \
+`g++ -Wno-deprecated-declarations -w -DLINUX -o glutmolekel \
     *.o \
     -L/opt/homebrew/lib \
     -lglui -ltiff -ljpeg -lglfw \
     -framework OpenGL \
     -framework GLUT \
     -framework Cocoa \
-    ./libmui.a -lm
-5. Troubleshooting Runtime Issues
-Instant Exit (Status 2): Ensure you are running the binary from the directory containing its configuration and data folders.
+    ./libmui.a -lm`
 
+## Note:
 Menu Warnings: macOS will log "Internal inconsistency in menus." These are harmless and caused by the legacy GLUT implementation; they do not affect the program's functionality.
 
