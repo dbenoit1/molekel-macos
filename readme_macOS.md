@@ -9,11 +9,11 @@ This repository contains a ported version of Molekel 4.3, updated to compile on 
 4. Launch via `./bin/molekel`
 
 ## Log of modifications from the original source required to compile and run this legacy version of Molekel on modern macOS.
-### browser.C (The Filesystem Fix)
+### browser.C (filesystem fix)
 
-The original pwd() function used a manual inode-climbing method that fails on modern macOS security. It was replaced with the standard getcwd():
+The original pwd() function used a manual inode-climbing method that fails on modern macOS security. 
+It was replaced with the standard getcwd():
 
-C++
 `void pwd(void) {
     if (getcwd(actual_directory, 1024) == NULL) {
         strncpy(actual_directory, ".", 128); 
