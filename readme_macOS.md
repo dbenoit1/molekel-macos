@@ -24,14 +24,14 @@ It was replaced with the standard getcwd():
 
 Legacy Linux paths were updated to Homebrew paths:
 
-Changed #include <UnixImageIO/jpeglib.h> to #include <jpeglib.h>
+Changed `#include <UnixImageIO/jpeglib.h>` to `#include <jpeglib.h>`
 
-Added #include <tiffio.h>
+Added `#include <tiffio.h>`
 
-Added typedef uint32_t uint32; to fix architecture-specific integer errors.
+Added `typedef uint32_t uint32;` to fix architecture-specific integer errors.
 
 ### libmui (The UI Library)
-Because the provided libmui.a was built for Intel/SGI, the source files in the mui/ folder had to be recompiled for arm64:
+Because the provided libmui.a was built for Intel/SGI, the source files in the mui/ folder had to be recompiled for arm64.
 
 ### Compilation Commands (added/included in new Makefile)
 Fortran Components
