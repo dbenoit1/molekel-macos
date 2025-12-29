@@ -8,7 +8,7 @@ This repository contains a ported version of Molekel 4.3, updated to compile on 
 3. Run `make`
 4. Launch via `./bin/molekel`
 
-## modifications from the original source required to compile and run this legacy version of Molekel on modern macOS.
+## Log of modifications from the original source required to compile and run this legacy version of Molekel on modern macOS.
 ### browser.C (The Filesystem Fix)
 
 The original pwd() function used a manual inode-climbing method that fails on modern macOS security. It was replaced with the standard getcwd():
@@ -33,13 +33,14 @@ Added typedef uint32_t uint32; to fix architecture-specific integer errors.
 ### libmui (The UI Library)
 Because the provided libmui.a was built for Intel/SGI, the source files in the mui/ folder had to be recompiled for arm64:
 
-### Compilation Commands
+### Compilation Commands (added/included in new Makefile)
 Fortran Components
+
 `gfortran -std=legacy -fno-range-check ms.f -o ms`
 
 C++ Components
-`g++ -I/opt/homebrew/include -Wno-deprecated-declarations -w -DLINUX -c *.C`
 
+`g++ -I/opt/homebrew/include -Wno-deprecated-declarations -w -DLINUX -c *.C`
 
 4. Final Linking Command
 This command links the object files against the macOS native OpenGL and GLUT frameworks instead of the old X11 libraries:
