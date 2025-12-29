@@ -14,11 +14,13 @@ This repository contains a ported version of Molekel 4.3, updated to compile on 
 The original pwd() function used a manual inode-climbing method that fails on modern macOS security. 
 It was replaced with the standard getcwd():
 
-`void pwd(void) {
+```
+void pwd(void) {
     if (getcwd(actual_directory, 1024) == NULL) {
         strncpy(actual_directory, ".", 128); 
     }
-}`
+}
+```
 
 ### snap.C (Header Fixes)
 
@@ -45,14 +47,16 @@ C++ Components
 ### Final Linking Command
 Links against the macOS native OpenGL and GLUT frameworks instead of the old X11 libraries:
 
-`g++ -Wno-deprecated-declarations -w -DLINUX -o glutmolekel \`
-`    *.o \`
-`    -L/opt/homebrew/lib \`
-`    -lglui -ltiff -ljpeg -lglfw \`
-`    -framework OpenGL \`
-`    -framework GLUT \`
-`    -framework Cocoa \`
-`    ./libmui.a -lm`
+```
+g++ -Wno-deprecated-declarations -w -DLINUX -o glutmolekel \
+    *.o \
+    -L/opt/homebrew/lib \
+    -lglui -ltiff -ljpeg -lglfw \
+    -framework OpenGL \
+    -framework GLUT \
+    -framework Cocoa \
+    ./libmui.a -lm
+```
 
 ## Note:
 Menu Warnings: macOS will log "Internal inconsistency in menus." These are harmless and caused by the legacy GLUT implementation; they do not affect the program's functionality.
